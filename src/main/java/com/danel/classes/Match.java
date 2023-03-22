@@ -2,7 +2,7 @@ package com.danel.classes;
 
 import com.danel.enums.ResultEnum;
 
-public class Match extends Team {
+public class Match {
     private Team team1;
     private Team team2;
     private int goalTeam1;

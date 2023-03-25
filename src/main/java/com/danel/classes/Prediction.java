@@ -12,10 +12,6 @@ public class Prediction {
     private Team team;
     private ResultEnum resultEnum;
 
-    public Prediction() throws IOException {
-        createFile();
-    }
-
     public Prediction(Match match, Team team, ResultEnum resultEnum) throws IOException {
         createFile();
         this.match = match;
@@ -54,9 +50,12 @@ public class Prediction {
     // Creamos el archivo
     private void createFile() throws IOException {
         String fileName = "prediction.csv";
-        Path filePath = Paths.get("com/danel/files/" + fileName);
+        Path filePath = Paths.get("src/main/java/com/danel/files/" + fileName);
+        // Si el archivo no existe, se crea el archivo
         if(!Files.exists(filePath)) {
             Files.createFile(filePath);
         }
+
     }
+
 }
